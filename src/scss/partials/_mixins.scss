@@ -1,0 +1,71 @@
+@import "variables";
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// box button mixing for color changes
+@mixin a-box-button($background-color, $color: $a-btn--color, $border: null) {
+  background-color: $background-color;
+  color: $color;
+  @if ($border) {
+    //border: 1px solid $border;
+    box-shadow: inset 0 0 0 1px $border;
+  }
+
+  &:hover {
+    background-color: lighten($background-color, 15%);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+@mixin typography($type) {
+  $type-setting: map_get($type-settings, $type);
+  @if map_has-key($type-settings, $type) {
+    @each $property, $value in $type-setting {
+      #{$property}: #{$value};
+    }
+  } @else {
+    @error "type settings doesn't have your typography type";
+  }
+}
+
+@mixin set-font-size($font-size, $line-height: inherit, $modifier: 0, $important: false) {
+
+  @if (type-of($font-size) == number) {
+    @if (unit($font-size) != "px") {
+      @error "`#{$font-size}` needs to be a pixel value.";
+    }
+  } @else {
+    @error "`#{$font-size}` needs to be a number.";
+  }
+
+  @if ($important == true) {
+    $important: !important;
+  } @else if ($important == false) {
+    $important: null;
+  } @else {
+    @error "`#{$important}` needs to be `true` or `false`.";
+  }
+
+  // We provide a `px` fallback for old IEs not supporting `rem` values.
+  font-size: $font-size $important;
+
+  @if ($line-height == "auto") {
+    line-height: ($line-height / $font-size) $important;
+  }
+
+  @else {
+
+    @if (type-of($line-height) == number or $line-height == "inherit" or $line-height == "normal") {
+      line-height: $line-height $important;
+    }
+
+    @else if ($line-height != 'none' and $line-height != false) {
+      @error "D’oh! `#{$line-height}` is not a valid value for `$line-height`."
+    }
+  }
+
+}

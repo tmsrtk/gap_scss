@@ -1,0 +1,35 @@
+@import "../partials/variables";
+@import "../partials/color_settings";
+@import "../partials/mixins";
+@import "../partials/font_settings";
+
+.nav {
+  height: 50px;
+  padding: 10px;
+  border-top: $global-nav-border-style;
+  box-shadow: 0 10px 10px -11px;
+  z-index: 999;
+  position: relative;
+
+  .nav-content {
+    position: relative;
+  }
+
+  &-content-header {
+    @include typography(base-1);
+    @include set-font-size($base-font-size--xlarge, 1);
+    @media (max-width: $breakpoint__bp-sm) {
+      @include set-font-size($base-font-size--large, 1);
+    }
+    @media (max-width: $breakpoint__bp-xs) {
+      @include set-font-size($base-font-size, 1);
+    }
+    top: 55%;
+    font-weight: $font-weight--bold;
+    color: $color-gray-medium;
+  }
+
+  &-search {
+    top: 35%;
+  }
+}

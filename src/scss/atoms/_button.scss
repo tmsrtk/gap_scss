@@ -1,0 +1,42 @@
+@import "../partials/variables";
+@import "../partials/color_settings";
+@import "../partials/mixins";
+@import "../partials/font_settings";
+
+$a-btn--padding: 0 20px !default;
+$a-btn--padding-lg: 0 30px !default;
+$a-btn--padding-sm: 0 25px!default;
+$a-btn--height: 50px !default;
+$a-btn--height-mini: 44px !default;
+$a-btn--height-tiny: 34px !default;
+$a-btn--color: $color-white !default;
+$a-btn--background-default: $color-gray-medium !default;
+$a-btn--background-primary: $color-primary !default;
+$a-btn--background-secondary: transparent !default;
+$a-btn--background-trinity: $color-white !default;
+$a-btn--link: $color-primary !default;
+$a-btn--border-radius: 4px !default;
+$a-btn--font-size: 16px !default;
+$a-btn--font-size-tiny: 14px !default;
+$a-btn--font-family: $font-family--primary !default;
+$a-btn--transition: all 0.3s ease-in-out !default;
+$a-btn--color-default: $color-gray-100 !default;
+
+// basic box button object
+.a-btn {
+  height: $a-btn--height;
+  padding: $a-btn--padding;
+  border: 0;
+  border-radius: $a-btn--border-radius;
+  outline: 0;
+  font-family: $a-btn--font-family;
+  font-weight: $font-weight--strong;
+  text-decoration: none;
+  transition: $a-btn--transition;
+  cursor: pointer;
+  user-select: none;
+}
+
+.a-btn--primary {
+  @include a-box-button($a-btn--background-primary);
+}

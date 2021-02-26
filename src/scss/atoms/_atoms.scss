@@ -1,0 +1,9 @@
+@import "button";
+@import "input";
+
+ div {
+  @include typography(base-1);
+  @include set-font-size($base-font-size--normal, 1);
+  color: $color-gray-medium;
+  font-weight: $font-weight--normal;
+}

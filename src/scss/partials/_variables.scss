@@ -1,0 +1,37 @@
+@import "../partials/color_settings";
+
+$grid__cols: 12;
+
+$grid__bp-xs: 576;
+$grid__bp-sm: 768;
+$grid__bp-md: 992;
+$grid__bp-lg: 1200;
+$map-grid-props: (
+        '': 0,
+        '-xs': $grid__bp-xs,
+        '-sm': $grid__bp-sm,
+        '-md': $grid__bp-md,
+        '-lg': $grid__bp-lg,
+);
+
+//font sizes
+$font-weight--light: 300 !default;
+$font-weight--normal: 400 !default;
+$font-weight--strong: 500 !default;
+$font-weight--bold: 600 !default;
+$font-weight--extra-bold: 800 !default;
+
+$breakpoint__bp-xs: 576px;
+$breakpoint__bp-sm: 768px;
+$breakpoint__bp-md: 992px;
+$breakpoint__bp-lg: 1200px;
+
+
+// Border styles
+$global-search-border-style: 1px solid $color-gray-lighter !default;
+$global-nav-border-style: 2px solid $color-gray-lighter !default;
+$global-border-style: 1px solid $color-black !default;
+$global-border-style-error: 1px dashed $color-red-100 !default;
+
+$global-font-size: 16px !default;
+$default-padding: 20px

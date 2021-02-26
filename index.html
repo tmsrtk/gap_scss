@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OMDB</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css" media="screen">
+
+</head>
+<body>
+<!--<div class="container container&#45;&#45;fluid">
+    <div class="container__row">
+        <div class="container__col-12">col-12</div>
+    </div>
+    <div class="container__row">
+        <div class="container__col-6">col-6</div>
+        <div class="container__col-6">col-6</div>
+    </div>
+    <div class="container__row">
+        <div class="container__col-4">col-4</div>
+        <div class="container__col-4">col-4</div>
+        <div class="container__col-4">col-4</div>
+    </div>
+    <div class="container__row">
+        <div class="container__col-3">col-3</div>
+        <div class="container__col-3">col-3</div>
+        <div class="container__col-3">col-3</div>
+        <div class="container__col-3">col-3</div>
+    </div>
+    <div class="container__row">
+        <div class="container__col-2">col-2</div>
+        <div class="container__col-2">col-2</div>
+        <div class="container__col-2">col-2</div>
+        <div class="container__col-2">col-2</div>
+        <div class="container__col-2">col-2</div>
+        <div class="container__col-2">col-2</div>
+    </div>
+    <div class="container__row">
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-1">col-1</div>
+    </div>
+    <div class="container__row">
+        <div class="container__col-1">col-1</div>
+        <div class="container__col-2">col-2</div>
+        <div class="container__col-6">col-6</div>
+        <div class="container__col-2">col-2</div>
+        <div class="container__col-1">col-1</div>
+    </div>
+</div>-->
+<!--<div class="container container&#45;&#45;fluid">
+    <div class="container__row">
+        <div class="container__col-12 container__col-sm-12 container__col-md-4">sm12, md4</div>
+        <div class="container__col-12 container__col-sm-12 container__col-md-4">sm12, md4</div>
+        <div class="container__col-12 container__col-sm-12 container__col-md-4">sm12, md4</div>
+    </div>
+    <div class="container__row">
+        <div class="container__col-3 container__col-offset-4">A</div>
+        <div class="container__col-1 container__col-offset-4">B</div>
+        <div class="container__col-1 container__col-md-offset-2">C</div>
+        <div class="container__col-1 container__col-md-offset-2 container__col-lg-offset-0">D</div>
+    </div>
+</div>-->
+<div class="container container--fluid">
+    <div class="nav" >
+        <div class="container">
+            <div class="container__row">
+                <div class="container__col-4 container__col-sm-4 container__col-xs-3">
+                    <span class="nav-content nav-content-header">OMDB Search</span>
+                </div>
+                <div class="container__col-8 container__col-sm-8 container__col-xs-9">
+                    <div class="search-bar-container nav-content nav-search">
+                        <form>
+                            <label class="search-bar-container-label">Search a movie</label>
+                            <input type="text" name="search" class="a-input-field a-input-field--search-bar">
+                            <button type = "submit" class="a-btn a-btn--primary">SEARCH</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="results-container">
+        <div class="container">
+            <div class="container__row">
+                <div class="container__col-12 container__col-lg-12">
+                    <div class="results-card">
+                        <div class="container">
+                            <div class="container__row">
+                                <div class="container__col-4 container__col-2 container__col-lg-2 container__col-sm-2 container__col-xs-3 img-background">
+                                    <div class="results-card results-card-img">
+                                    </div>
+                                </div>
+                                <div class="container__col-8 container__col-lg-10 container__col-sm-10 container__col-xs-9">
+                                    <div class="results-card-inner">
+                                        <div class="results-card-title">The Avengers</div>
+                                        <div class="sub-content">
+                                            <div class="results-card-sub-title">Plot</div>
+                                            <div class="results-card-sub-content">This film explores a Parisian woman's descent into prostitution. The movie is comprised of a series of 12 \"tableaux\"-- scenes which are basically unconnected episodes, each presented with a worded introduction.</div>
+                                        </div>
+                                        <div class="sub-content">
+                                            <div class="results-card-sub-title">Actors</div>
+                                            <div class="results-card-sub-content">Anna Karina, Sady Rebbot, André S. Labarthe, Guylaine Schlumberger</div>
+                                        </div>
+                                        <div class="sub-content">
+                                            <div class="results-card-sub-title">Ratings</div>
+                                            <div class="results-card-sub-content last">
+                                                <ul>
+                                                    <li>Internet Movie Database: 8.0/10</li>
+                                                    <li>Rotten Tomatoes: 91%</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="results-card-footer">
+                                        <span class="results-card-footer-text">2012</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__row">
+                <div class="container__col-lg-6 container__col-xs-12 container__col-12">
+                    <div class="results-card">
+                        <div class="container">
+                            <div class="container__row">
+                                <div class="container__col-lg-4 container__col-sm-2 container__col-xs-3 container__col-4">
+                                    <div class="results-card results-card-img">
+                                    </div>
+                                </div>
+                                <div class="container__col-lg-8 container__col-sm-10 container__col-xs-9 container__col-8">
+                                    <div class="results-card-inner">
+                                        <div class="results-card-title">The Avengers</div>
+                                    </div>
+                                    <div class="results-card-footer">
+                                        <span class="results-card-footer-text">2012</span>
+                                        <button class="a-btn a-btn--primary">DETAILS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__col-lg-6 container__col-xs-12 container__col-12">
+                    <div class="results-card">
+                        <div class="container">
+                            <div class="container__row">
+                                <div class="container__col-lg-4 container__col-sm-2 container__col-xs-3 container__col-4">
+                                    <div class="results-card results-card-img">
+                                    </div>
+                                </div>
+                                <div class="container__col-lg-8 container__col-sm-10 container__col-xs-9 container__col-8">
+                                    <div class="results-card-inner">
+                                        <div class="results-card-title">The Avengers</div>
+                                    </div>
+                                    <div class="results-card-footer">
+                                        <span class="results-card-footer-text">2012</span>
+                                        <button class="a-btn a-btn--primary">DETAILS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__row">
+                <div class="container__col-lg-6 container__col-xs-12 container__col-12">
+                    <div class="results-card">
+                        <div class="container">
+                            <div class="container__row">
+                                <div class="container__col-lg-4 container__col-sm-2 container__col-xs-3 container__col-4">
+                                    <div class="results-card results-card-img">
+                                    </div>
+                                </div>
+                                <div class="container__col-lg-8 container__col-sm-10 container__col-xs-9 container__col-8">
+                                    <div class="results-card-inner">
+                                        <div class="results-card-title">The Avengers</div>
+                                    </div>
+                                    <div class="results-card-footer">
+                                        <span class="results-card-footer-text">2012</span>
+                                        <button class="a-btn a-btn--primary">DETAILS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__col-lg-6 container__col-xs-12 container__col-12">
+                    <div class="results-card">
+                        <div class="container">
+                            <div class="container__row">
+                                <div class="container__col-lg-4 container__col-sm-2 container__col-xs-3 container__col-4">
+                                    <div class="results-card results-card-img">
+                                    </div>
+                                </div>
+                                <div class="container__col-lg-8 container__col-sm-10 container__col-xs-9 container__col-8">
+                                    <div class="results-card-inner">
+                                        <div class="results-card-title">The Avengers</div>
+                                    </div>
+                                    <div class="results-card-footer">
+                                        <span class="results-card-footer-text">2012</span>
+                                        <button class="a-btn a-btn--primary">DETAILS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__row">
+                <div class="container__col-lg-6 container__col-xs-12 container__col-12">
+                    <div class="results-card">
+                        <div class="container">
+                            <div class="container__row">
+                                <div class="container__col-lg-4 container__col-sm-2 container__col-xs-3 container__col-4">
+                                    <div class="results-card results-card-img">
+                                    </div>
+                                </div>
+                                <div class="container__col-lg-8 container__col-sm-10 container__col-xs-9 container__col-8">
+                                    <div class="results-card-inner">
+                                        <div class="results-card-title">The Avengers</div>
+                                    </div>
+                                    <div class="results-card-footer">
+                                        <span class="results-card-footer-text">2012</span>
+                                        <button class="a-btn a-btn--primary">DETAILS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__col-lg-6 container__col-xs-12 container__col-12">
+                    <div class="results-card">
+                        <div class="container">
+                            <div class="container__row">
+                                <div class="container__col-lg-4 container__col-sm-2 container__col-xs-3 container__col-4">
+                                    <div class="results-card results-card-img">
+                                    </div>
+                                </div>
+                                <div class="container__col-lg-8 container__col-sm-10 container__col-xs-9 container__col-8">
+                                    <div class="results-card-inner">
+                                        <div class="results-card-title">The Avengers</div>
+                                    </div>
+                                    <div class="results-card-footer">
+                                        <span class="results-card-footer-text">2012</span>
+                                        <button class="a-btn a-btn--primary">DETAILS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__row" >
+                <div class="container__col-12">
+                    <div class="message-box">
+                        <div class="message-box message-box-info">
+                           <span class="message">Welcome to OMDB Search, search something in the bar above!</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__row" >
+                <div class="container__col-12">
+                    <div class="message-box">
+                        <div class="message-box message-box-error">
+                            <span class="message">Movie not found!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

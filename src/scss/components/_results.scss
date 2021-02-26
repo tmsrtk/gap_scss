@@ -1,0 +1,91 @@
+@import "../partials/variables";
+@import "../partials/color_settings";
+@import "../partials/mixins";
+@import "../partials/font_settings";
+
+.results-container {
+  background-color: $color-gray-lightest;
+  padding-top: 20px;
+}
+
+.results-card {
+  box-shadow: 2px 3px 8px -4px;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+
+  &-img {
+    width: 100%;
+    height: 240px;
+    background-image: url('https://m.media-amazon.com/images/M/MV5BNjMyZmI5NmItY2JlMi00NzU3LWI5ZGItZjhkOTE0YjEyN2Q4XkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg');
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background-size: cover;
+    display: block;
+    background-position: 50%;
+  }
+  .results-card-inner {
+    position: relative;
+    padding: $default-padding;
+    min-height: 140px;
+    height: auto;
+    border-bottom: $global-search-border-style;
+    display: block;
+    .results-card-sub-content {
+      padding: 0 0 $default-padding 0;
+    }
+  }
+
+  .results-card-title {
+    font-weight: $font-weight--bold;
+    padding: 0 0 $default-padding 0;
+  }
+
+  .results-card-sub-title {
+    font-weight: $font-weight--light;
+    @include set-font-size($base-font-size--xsmall, 1);
+  }
+
+  .results-card-sub-content {
+    font-weight: $font-weight--bold;
+    @include set-font-size($base-font-size--normal, 1);
+
+    ul {
+      padding: 0 5px;
+      margin: 0;
+      li {
+        padding: 0 5px;
+        &::marker {
+          content: "-";
+        }
+      }
+    }
+    &.last {
+      padding: 0;
+    }
+  }
+
+  .results-card-footer {
+    position: relative;
+    top: 5%;
+    height: auto;
+    min-height: 55px;
+    .a-btn--primary {
+      float: right;
+      margin-right: 20px;
+      height: 30px;
+      @include set-font-size($base-font-size--normal, 1);
+    }
+    .results-card-footer-text {
+      float: left;
+      color: $color-gray-lighter;
+      padding: 10px $default-padding;
+      top: 5%;
+    }
+  }
+
+  .img-background{
+    background-color: $color-gray-lighter;
+  }
+}

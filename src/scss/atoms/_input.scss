@@ -1,0 +1,22 @@
+@import "../partials/variables";
+@import "../partials/color_settings";
+@import "../partials/mixins";
+
+
+.a-input-field {
+  background-color: $color-white;
+  border: $global-border-style;
+  border-radius: 5px;
+  height: 44px;
+  padding: 2px 8px;
+  text-overflow: ellipsis;
+  word-break: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.5;
+  transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+
+  &:focus {
+    border: 1px solid $color-primary;
+  }
+}

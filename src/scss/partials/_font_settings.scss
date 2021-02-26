@@ -1,0 +1,81 @@
+$em-base:             16px;
+
+// Global Typography Styles
+// ---------------------------------------------------------------------------------------------------
+
+/// Font sizes
+$base-font-size--xsmall: 11px !default;
+$base-font-size--normal: 12px !default;
+$base-font-size--small: 14px !default;
+$base-font-size: 16px !default;
+$base-font-size--large: 20px !default;
+$base-font-size--xlarge: 24px !default;
+$base-font-size--huge: 38px !default;
+$base-font-size--xhuge: 50px !default;
+
+$base-line-height--xsmall: 16px !default;
+$base-line-height--small: 18px !default;
+$base-line-height: 26px !default;
+$base-line-height--large: 28px !default;
+$base-line-height--xlarge: 35px !default;
+$base-line-height--huge       : 50px !default;
+$base-line-height--xhuge      : 65px !default;
+
+//font families
+$font-family--primary:'proxima-nova', -apple-system, Helvetica, Arial, sans-serif !default;
+$font-family--secondary:'Open Sans', Arial, sans-serif !default;
+
+
+$font-weight--light: 300 !default;
+$font-weight--normal: 400 !default;
+$font-weight--strong: 500 !default;
+$font-weight--bold: 500 !default;
+$font-weight--extra-bold: 800 !default;
+
+$letter-spacing--light: 0.11px !default;
+$letter-spacing--normal: 0.13px !default;
+$letter-spacing--caps: 0.92px !default;
+$letter-spacing--extra: 1px !default;
+
+$type-settings: (
+        base-1: (
+                font-family:$font-family--primary,
+                font-weight:$font-weight--normal
+        ),
+        base-2: (
+                font-family:$font-family--primary,
+                font-weight:$font-weight--strong
+        ),
+        base-3: (
+                font-family:$font-family--primary,
+                font-weight:$font-weight--bold
+        ),
+        base-4: (
+                font-family:$font-family--primary,
+                font-weight:$font-weight--extra-bold
+        ),
+        title-1: (
+                font-family:$font-family--secondary,
+                font-weight:$font-weight--normal
+        ),
+        title-2: (
+                font-family:$font-family--secondary,
+                font-weight:$font-weight--strong
+        ),
+        title-3: (
+                font-family:$font-family--secondary,
+                font-weight:$font-weight--bold
+        ),
+        title-4: (
+                font-family:$font-family--secondary,
+                font-weight:$font-weight--extra-bold
+        ),
+        label: (
+                font-size: $base-font-size--xsmall,
+                line-height:$base-line-height--xsmall,
+                text-transform: uppercase,
+                font-weight: $font-weight--bold,
+                letter-spacing: $letter-spacing--caps
+        )
+
+) !default;

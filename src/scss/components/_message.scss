@@ -1,0 +1,28 @@
+@import "../partials/variables";
+@import "../partials/color_settings";
+@import "../partials/mixins";
+@import "../partials/font_settings";
+
+.message-box {
+  margin-top: 15px;
+  height: 50px;
+  position: relative;
+  &-info {
+    background-color: $color-gray-lighter;
+    color: $color-gray-medium;
+    text-align: center;
+  }
+  &-error {
+    background-color: $color-red-600;
+    color: $color-red-100;
+    border: $global-border-style-error;
+    text-align: center;
+  }
+  .message {
+    @include typography(base-1);
+    @include set-font-size($base-font-size--normal, 1);
+    font-weight: $font-weight--bold;
+    position: relative;
+    top: 44%;
+  }
+}

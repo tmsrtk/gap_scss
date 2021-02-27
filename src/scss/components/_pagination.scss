@@ -1,0 +1,34 @@
+@import "../partials/variables";
+@import "../partials/color_settings";
+@import "../partials/mixins";
+@import "../partials/font_settings";
+
+.pagination {
+  position: sticky;
+  bottom: 0;
+  height: 30px;
+  border-top: $global-nav-border-style;
+  box-shadow: 0 10px 10px -11px;
+  z-index: 999;
+  background-color: $color-white;
+  span {
+    padding: 8px 16px;
+  }
+  span:hover {
+    background-color: $color-primary-l15;
+    color: $color-gray-medium;
+  }
+  .previous {
+    background-color: $color-gray-lightest;
+    color: $color-gray-medium;
+  }
+
+  .next {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  .pagination-controls {
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+}

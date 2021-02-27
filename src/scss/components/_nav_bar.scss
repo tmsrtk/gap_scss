@@ -9,7 +9,9 @@
   border-top: $global-nav-border-style;
   box-shadow: 0 10px 10px -11px;
   z-index: 999;
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: $color-white;
 
   .nav-content {
     position: relative;

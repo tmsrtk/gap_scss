@@ -17,9 +17,9 @@ Run gulp for build the project and create style.css
 ```bash
 gulp
 ```
-Run gulp --watch for build the project and create style.css in watch mode
+Run gulp watch for build the project and create style.css in watch mode
 ```bash
-gulp --watch
+gulp watch
 ```
 
 Final style.css file will be created on assets/css/style.css
